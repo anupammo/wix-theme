@@ -1,1 +1,30 @@
-Landing template layout
+// velo-code/templates/landing-template.wix
+import { renderHeader } from './header-template';
+import { renderFooter } from './footer-template';
+import { renderContact } from './contact-template';
+import { applyMetaTemplate } from './meta-template';
+
+/**
+ * Renders a landing page layout and metadata.
+ * @param {Object} pageSettings
+ * @param {Object} siteSettings
+ */
+export function renderLandingPage(pageSettings, siteSettings) {
+  applyMetaTemplate({
+    title: pageSettings.title || "Special Offer",
+    description: pageSettings.description || siteSettings.description,
+    keywords: pageSettings.keywords || siteSettings.keywords
+  });
+
+  renderHeader(pageSettings.layoutHeader);
+  renderFooter(pageSettings.layoutFooter, siteSettings.dynamicYear);
+  renderContact(pageSettings.layoutContact);
+
+  if ($w('#offerBanner')) {
+    $w('#offerBanner').text = "Limited Time Deal – Save 30%!";
+  }
+
+  if ($w('#signupForm')) {
+    $w('#signupForm').show();
+  }
+}
