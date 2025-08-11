@@ -1,1 +1,6 @@
-// Logo component for Wix header
+// Logo click redirects to homepage
+$w.onReady(() => {
+  $w("#siteLogo").onClick(() => {
+    wixLocation.to("/");
+  });
+});
