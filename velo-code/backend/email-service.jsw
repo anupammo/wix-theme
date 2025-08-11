@@ -1,10 +1,10 @@
-// Backend email service for contact form processing
+// backend/email-service.jsw
 import { sendEmail } from 'wix-crm-backend';
 
-export async function sendContactForm(data) {
+export async function sendContactForm({ name, email, message }) {
   return sendEmail({
-    to: "you@example.com",
-    subject: "New Contact Form Submission",
-    body: `Name: ${data.name}, Message: ${data.message}`
+    to: "your@email.com",
+    subject: `New Contact Form Submission from ${name}`,
+    body: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
   });
 }
