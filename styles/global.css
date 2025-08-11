@@ -1,8 +1,34 @@
-/* Main stylesheet for color palette, font rules, and global styles */
-
 :root {
   --primary-color: #1A73E8;
   --accent-color: #FF6F00;
+  --neutral-color: #333333;
+  --background-color: #ffffff;
   --font-main: 'Helvetica Neue', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --spacing-unit: 8px;
+  --border-radius: 6px;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--neutral-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
 }
