@@ -1,1 +1,3 @@
 # Prewritten meta tags for SEO reuse
+<title>Modern Web Solutions | Your Digital Partner</title>
+<meta name="description" content="Scalable, SEO-optimized Wix themes for modern businesses.">
