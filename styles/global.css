@@ -1,1 +1,8 @@
 /* Main stylesheet for color palette, font rules, and global styles */
+
+:root {
+  --primary-color: #1A73E8;
+  --accent-color: #FF6F00;
+  --font-main: 'Helvetica Neue', sans-serif;
+  --spacing-unit: 8px;
+}
