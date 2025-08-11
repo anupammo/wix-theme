@@ -1,1 +1,24 @@
-About page template layout
+// velo-code/templates/about-template.wix
+import { renderHeader } from './header-template';
+import { renderFooter } from './footer-template';
+import { applyMetaTemplate } from './meta-template';
+
+/**
+ * Renders the About page layout and metadata.
+ * @param {Object} pageSettings
+ * @param {Object} siteSettings
+ */
+export function renderAboutPage(pageSettings, siteSettings) {
+  applyMetaTemplate({
+    title: pageSettings.title || "About Us",
+    description: pageSettings.description || siteSettings.description,
+    keywords: pageSettings.keywords || siteSettings.keywords
+  });
+
+  renderHeader(pageSettings.layoutHeader);
+  renderFooter(pageSettings.layoutFooter, siteSettings.dynamicYear);
+
+  if ($w('#aboutText')) {
+    $w('#aboutText').text = "We are a passionate team dedicated to excellence.";
+  }
+}
