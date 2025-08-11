@@ -1,4 +1,7 @@
 {
   "@context": "https://schema.org",
-  "@type": "Organization"
+  "@type": "Organization",
+  "name": "Modern Web Solutions",
+  "url": "https://yourwixsite.com",
+  "logo": "https://yourwixsite.com/logo.png"
 }
